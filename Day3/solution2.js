@@ -8,6 +8,7 @@ try {
 } catch (err) {
     console.error(err);
 }
+/* END OF DATA PROCESSING */
 
 let previousRow = null
 
