@@ -1,5 +1,5 @@
 /* START OF DATA PROCESSING */
-const fs = require('fs');
+const fs = require('fs')
 
 let times
 let distances
@@ -9,7 +9,7 @@ try {
     times = lines[0].split(':')[1].trim().split(/\s+/).map(Number)
     distances = lines[1].split(':')[1].trim().split(/\s+/).map(Number)
 } catch (err) {
-    console.error(err);
+    console.error(err)
 }
 /* END OF DATA PROCESSING */
 
@@ -19,11 +19,11 @@ function solveQuadratic(a, b, c) {
     if (discriminant < 0) {
         return []; // No real roots
     } else if (discriminant === 0) {
-        return [-b / (2 * a)]; // One real root
+        return [-b / (2 * a)] // One real root
     } else {
-        const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-        const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-        return [root1, root2]; // Two real roots
+        const root1 = (-b + Math.sqrt(discriminant)) / (2 * a)
+        const root2 = (-b - Math.sqrt(discriminant)) / (2 * a)
+        return [root1, root2] // Two real roots
     }
 }
 
@@ -37,7 +37,6 @@ function range(start, end) {
 
 let result = 1
 
-// Example usage
 for (let i = 0; i < times.length; i++) {
     const time = times[i]
     const distance = distances[i]

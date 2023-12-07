@@ -1,7 +1,7 @@
 /* START OF DATA PROCESSING */
-const fs = require('fs');
+const fs = require('fs')
 
-let parsedSections = {};
+let parsedSections = {}
 
 try {
     let input = fs.readFileSync('sampleInput.txt', 'utf8')
@@ -12,7 +12,7 @@ try {
             const segments = sections[i].split(':')
             const title = segments[0].trim()
             const value = segments[1].trim()
-            const numbers = value.split(/\s+/).map(Number); // Split by whitespace and convert to numbers
+            const numbers = value.split(/\s+/).map(Number) // Split by whitespace and convert to numbers
 
             parsedSections[title] = numbers
 
